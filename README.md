@@ -417,3 +417,59 @@ demos remain subject to vendor terms, including user, feature, automation, and
 output sharing restrictions. Cracked copies, stolen keys, unauthorized key
 sharing, and bypassing license restrictions are not authorized. This guidance
 does not amend MIT or third-party licenses.
+
+
+---
+
+# Owned checkout guide
+
+## Purpose and status
+
+`reverser-engineering-` is the owned reference fork/alias for [morluto/rea](https://github.com/morluto/rea), REA: Reverse Engineer Anything. The upstream README above remains unchanged, including its official-download warning, capability descriptions, translations, examples and MIT attribution. This fork name does not make it an official distribution channel.
+
+## Repository map
+
+- `src/`: runtime contracts, composition, adapters and analysis workflows.
+- `scripts/rea.mjs`: CLI entry point registered as `rea` and `rea-agents`.
+- `scripts/`, `tests/`: build/development/check tooling and verification scenarios.
+- `.agents/skills/`: canonical maintained skill source and development reference skills.
+- `bridge/`, `native/`, `third_party/`, `licenses/`: bridge/native support and third-party material.
+- `docs/`, `website/`: guides, generated-document contracts and website source.
+- `AGENTS.md`, `CONTRIBUTING.md`, `LICENSE`: authority, contribution and licensing rules.
+
+## Architecture and integrations
+
+CLI and MCP interfaces expose evidence-producing analysis workflows. Provider support varies by target and can require separately installed engines or runtime tools. Source composition separates providers and preserves bounded evidence/limitations; a source capability table is not a successful real-provider verification for this machine. Generated `skills/` and documentation catalogs are outputs; canonical skill source lives under `.agents/skills/`.
+
+## Setup and environments
+
+Use the checked-in `.nvmrc` and package engine/package-manager fields for this revision. The inspected manifest pins npm 11.16.0 and Node ranges `^22.23.4 || ^24.22.1 || >=26.12.1`. Upstream setup can register MCP, copy workflow instructions and alter agent configuration; some native tools require additional approved installation. A target-specific runtime may need credentials or licenses. No setup, dependency install, provider launch or target inspection ran here.
+
+## Safe commands
+
+For this documentation review use `git status --short`, `git diff -- README.md` and `git diff --check`. Upstream install, update, build, test and deployment examples above are retained reference material, not commands executed or authorized by this README rollout.
+
+`build:cached`, `check:fast`, `test:local` and `docs:check` are upstream development commands, not read-only README checks. Builds generate artifacts; docs checks require installed dependencies/generated artifacts and tests; the package has a prepare lifecycle hook. Do not invoke `npx`, setup/update, browser acquisition or binary tools merely to inspect this fork's documentation.
+
+## Testing and validation
+
+The test tree covers contracts, workflows and providers with distinct real-versus-simulated evidence requirements. No tests or performance measurements were run, and no provider compatibility claim is added. Existing upstream results and badges are preserved context, not verification of this fork or current host.
+
+## Deployment and rollback
+
+Publishing npm packages, updating MCP registrations and deploying `website/` are separate operations. Preserve the prior approved package/configuration and review setup backups before an installed-version rollback. A code rollback does not remove acquired artifacts or undo target-side actions. This documentation branch remains local; no release or upstream synchronization was performed.
+
+## Risks and guardrails
+
+Analyze only authorized targets, and preserve proprietary-data/credential boundaries. Keep evidence and limitations distinct from guesses. Do not commit binaries, provider project files, local captures, generated outputs or private planning material. Preserve MIT and third-party notices. Contributor readiness declarations belong to the human owner; this owned-fork guide does not assert upstream acceptance or human readiness.
+
+## Related documentation
+
+- [Agent guidance](AGENTS.md)
+- [Contribution and readiness policy](CONTRIBUTING.md)
+- [Installation](docs/installation.md)
+- [Testing scope](docs/testing.md)
+- [CLI and evidence](docs/cli.md)
+- [License](LICENSE)
+
+This owned-checkout guide was checked statically only. No installation, application build/test, agent invocation, provider call, target acquisition, database operation or deployment was performed. Installed state, upstream freshness, external URLs and runtime behavior remain unverified.
